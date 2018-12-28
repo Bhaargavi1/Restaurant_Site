@@ -1,0 +1,106 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/user_hotel.css">
+<link rel = "stylesheet" href = "/a/css/user_rest.css">
+<link rel = "stylesheet" href = "/a/css/hotel.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<title>Restaurant Home Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <section>
+        <div class = 'row text-center'>
+            <div class=" mylogo"><i><span style="font-size:32px">!!! W</span>elcome to <span style="font-size:32px">T</span>He <span style="font-size:32px">I</span>NCREDIBLE<span style="font-size:32px"> E</span>NIGMA<span style="font-size:32px"> !!!</span></i>
+             </div>
+        </div>
+    </section>
+    <!-- navigation part -->
+    <nav class = 'navbar navbar-inverse' data-spy = 'affix' data-offset-top = '197'>
+        <ul class = 'nav navbar-nav'>
+            <li><a href="/main_rest" class = 'links'>Home</a></li>
+            <li><a href="/food" class = 'links'>Order Food</a></li>
+            <li><a href="/myorders" class = 'links'>My Orders</a></li>
+            <li><a href="/reviews_rest" class = 'links'>Reviews</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right contact">
+            <li><u><a href="/" class = 'links-sign'>Sign-Out</a></u></li>
+            <li><u><a href="/main_hotel" class = 'links-sign'>Hotel</a></u></li>
+            <i class="fa fa-linkedin-square link"></i>
+            <i class="fa fa-twitter-square tweet"></i>
+            <i class="fa fa-facebook-official fb"></i>
+            <i class="fa fa-google-plus-official gp"></i>
+            <i class="fa fa-vimeo-square vm"></i>
+            <i class="fa fa-flickr fc"></i>
+        </ul>
+    </nav>
+    <div ng-app = 'myApp' ng-controller = 'reviews_rest'>
+       <div class = 'w3-card-4 w3-white' style = 'margin-left:120px;width:80%;height:110%'>
+         <h2 class = 'heading'>View All Old Reviews</h2>
+         <div id = 'review_rest'></div>
+     </div>
+ </div>
+
+
+<footer>
+    <div class="container text-left">
+        <div class="row ">
+            <div class=" mylogo2 text-center" style = 'margin-bottom:40px;'><i><span style="font-size:32px">
+                The Incredible Enigma</span></i>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6 ">
+                <ul class="list-group ">
+                    <li>About Us</li>
+                    <li >Culture</li>
+                    <li>Blog</li>
+                    <li >Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Code of Conduct</li>
+                    <li>Community</li>
+                    <li>Verified Users</li>
+                    <li>Blogger Help</li>
+                    <li>Developers</li>
+                    <li>Mobile Apps</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Add a Restaurant</li>
+                    <li>Claim your Listing</li>
+                    <li>Business App</li>
+                    <li>Business Blog</li>
+                    <li>Restaurant Widgets</li>
+                    <li>Products for Businesses</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Privacy </li>
+                    <li>Terms and Conditions</li>
+                    <li>API Policy </li>
+                    <li>CSR</li>
+                    <li>Security</li>
+                    <li>Site Map</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+</footer>
+</section>
+<script src="/a/js/rest.js"></script>
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script> 
+   
+</body>
+</html>

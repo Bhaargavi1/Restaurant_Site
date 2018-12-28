@@ -1,0 +1,177 @@
+.mylogo{
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: hsl(35, 100%, 30%);
+    background: hsl(35, 60%, 80%);
+    text-shadow: 0 0 2px 1px hsl(35, 70%, 30%),
+             0 0 4px 4px hsla(30, 100%, 55%, 0.5),
+             -1px 1px 2px 7px hsl(45, 60%, 95%),
+             -3px 3px 1px 4px hsl(35, 70%, 30%),
+             -3px 3px 4px 8px hsla(30, 90%, 55%, 0.5);
+    font-size:20px;
+    font-weight:bold;
+}
+.navbar{
+    background-color:white;
+    border:none;
+}
+ul{
+    margin-left:100px;
+}
+.affix {
+      top: 0;
+      width: 100%;
+      z-index: 9999 !important;
+  }
+.nav{
+    margin-left:100px;
+    margin-top:30px;
+    font-size:20px;
+}
+.links{
+    color:navy !important;
+}
+.links:hover{
+    color:black !important;
+    text-decoration:underline;
+}
+.contact{
+    margin-top:40px;
+    margin-right:30px;
+}
+.link:hover{
+    font-size:24px;
+    color:brown;
+}
+.tweet:hover{
+    font-size:24px;
+    color:lightblue;
+}
+.fb:hover{
+    font-size:24px;
+    color:navy;
+}
+.gp:hover{
+    font-size:24px;
+    color:red;
+}
+.vm:hover{
+    font-size:24px;
+   color:lightblue;
+}
+.fc:hover{
+    font-size:24px;
+    color:orange;
+}
+.main{
+    background-color:lightgray;
+}
+.img{
+    height:600px !important;
+    width:100%;
+}
+.carousel-caption{
+    position:absolute;
+    top: 180px;
+    -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+         -o-animation: fadein 2s; /* Opera < 12.1 */
+            animation: fadein 2s;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Opera < 12.1 */
+@-o-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+.head{
+    margin-left:20px;
+    color:navy;
+}
+.subhead{
+    margin-left:12px;
+    color:grey;
+}
+.heading{
+    text-align:center;
+    color:navy;
+}
+.link_book{
+     text-align:center;
+    color:red;
+    margin-top:5px;
+}
+.thumbnail{
+    height:310px !important;
+    width:300px !important;
+    margin-left:30px;
+    margin-top:20px;
+}
+.thumbnail:hover{
+    border:1px solid blue;
+}
+.image{
+    height:250px !important;
+    width:300px;
+    margin-left:30px;
+}
+.cap{
+    color:navy;
+}
+.subcap{
+    color:gray;
+}
+.menu{
+    width:99%;
+    height:450px;
+    margin-bottom:20px;
+}
+.img_dance{
+    margin-top:20px;
+    margin-left:20px;
+    width:94%;
+    margin-bottom:30px;
+    height: 350px !important;
+}
+
+.card{
+    width:95%;
+    margin-left:10px;
+}
+.btn_book, .btn_book_hide{
+    margin-left:220px;
+    margin-bottom:20px;
+    margin-top:5px;
+}
+.btn_book_hide{
+    display:none;
+}
+
+.textarea{
+    text-align: left !important;
+    margin-top: 20px;
+    width: 85%;
+    margin-left: 50px;
+}

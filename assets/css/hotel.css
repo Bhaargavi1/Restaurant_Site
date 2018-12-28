@@ -1,0 +1,147 @@
+.heading{
+    text-align:center;
+    color:navy;
+}
+.sub{
+     text-align:center;
+    color:gray;
+    margin-top:5px;
+}
+footer{
+    background-color:black;
+    color:#ffffff;
+    margin-top:20px;
+}
+.card_logo{
+    margin-top:70px;
+    margin-left:100px;
+    width:50%;
+}
+.card_logo2{
+    margin-top:90px;
+    margin-left:220px;
+    width:50%;
+}
+
+.img_kit{
+    margin-left:25px;
+    margin-top:10px;
+    width:85%;
+    height:90%;
+    margin-bottom:20px;
+}
+.img_rest{
+    margin-left:25px;
+    margin-top:10px;
+    width:85%;
+    height:250px;
+    margin-bottom:20px;
+}
+.options{
+    color:navy;
+    font-size:28px;
+}
+.color_navy{
+    color:navy;
+    font-weight: bold;
+}
+a:hover{
+    text-decoration:underline;
+    color:red;
+}
+.font_big{
+    font-size:20px;
+    margin-top:10px;
+}
+.nav{
+    margin-left:15px !important;
+}
+
+.container2 {
+    border: 2px solid #dedede;
+    background-color: #f1f1f1;
+    border-radius: 5px;
+    padding: 10px;
+    margin:10px 20px 10px 20px;
+}
+
+.darker {
+    border-color: #ccc;
+    background-color: #ddd;
+}
+
+.container::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+.container2 img {
+    float: left;
+    max-width: 60px;
+    width: 100%;
+    margin-right: 20px;
+    border-radius: 50%;
+}
+
+.container2 img.right {
+    float: right;
+    margin-left: 20px;
+    margin-right:0;
+}
+
+.rooms-admin{
+    margin-top:40px;
+}
+
+.badge-p{
+    margin-left:10px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.badge-p-deluxe{
+    margin-left:10px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+.badge-p-supremum , .badge-p-suit{
+    margin-left:-10px;
+    margin-top:20px;
+    margin-bottom:10px;
+}
+
+.badge-p-suit{
+    border-radius:40px;
+}
+
+
+.badge-styling{
+   margin-left:15px;
+   width:50px;
+   height:50px;
+}
+
+.badge-style{
+    border-radius: 50px;
+    margin-left:15px;
+   width:50px;
+   height:50px;
+}
+.links-sign{
+    font-size:15px;
+    color:navy !important;
+    margin-left:5px !important;
+    padding-right:10px;
+    padding-left:10px;
+    text-decoration:underline;
+}
+.badge-success{
+    background-color:green;
+}
+.card_book{
+    margin-left:50px;
+    width:80%;
+    margin-top:20px;
+    margin-bottom:10px;
+}

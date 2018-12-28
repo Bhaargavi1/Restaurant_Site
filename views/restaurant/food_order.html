@@ -1,0 +1,792 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/user_hotel.css">
+<link rel = "stylesheet" href = "/a/css/user_rest.css">
+<link rel = "stylesheet" href = "/a/css/hotel.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<title>Restaurant Home Page</title>
+</head>
+<body>
+    <!-- Header -->
+    <section>
+        <div class = 'row text-center'>
+            <div class=" mylogo"><i><span style="font-size:32px">!!! W</span>elcome to <span style="font-size:32px">T</span>He <span style="font-size:32px">I</span>NCREDIBLE<span style="font-size:32px"> E</span>NIGMA<span style="font-size:32px"> !!!</span></i>
+             </div>
+        </div>
+    </section>
+    <!-- navigation part -->
+    <nav class = 'navbar navbar-inverse' data-spy = 'affix' data-offset-top = '197'>
+        <ul class = 'nav navbar-nav'>
+            <li><a href="/main_rest" class = 'links'>Home</a></li>
+            <li><a href="/food" class = 'links'>Order Food</a></li>
+            <li><a href="/myorders" class = 'links'>My Orders</a></li>
+            <li><a href="/reviews_rest" class = 'links'>Reviews</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right contact">
+
+            <li><u><a href="/" class = 'links-sign'>Sign-Out</a></u></li>
+            <li><u><a href="/main_hotel" class = 'links-sign'>Hotel</a></u></li>
+            <i class="fa fa-linkedin-square link"></i>
+            <i class="fa fa-twitter-square tweet"></i>
+            <i class="fa fa-facebook-official fb"></i>
+            <i class="fa fa-google-plus-official gp"></i>
+            <i class="fa fa-vimeo-square vm"></i>
+            <i class="fa fa-flickr fc"></i>
+        </ul>
+    </nav>
+    <section>
+        <div class = 'row'  ng-app = 'myApp'>
+            <div class = 'col-sm-9 col-sm-offset-1' ng-controller = 'order_Ctrl'>
+                <div class = 'w3-card-4 w3-white' id = 'order_place'>
+                    <ul class="nav nav-pills" >
+                        <li class="active"><a data-toggle="pill" href="#start">Starters</a></li>
+                        <li><a data-toggle="pill" href="#soup">Soups & Salads</a></li>
+                        <li><a data-toggle="pill" href="#iveg">Indian-Veg</a></li>
+                        <li><a data-toggle="pill" href="#inon">Indian-Non-Veg</a></li>
+                        <li><a data-toggle="pill" href="#chinese">Chinese</a></li>
+                        <li><a data-toggle="pill" href="#drinks">Drinks & Deserts</a></li>
+                    </ul>
+                    <div class="tab-content" >
+                        <!-- For Starters -->
+                        <div id="start" class="tab-pane fade in active">
+                             <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Finger Chips</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>110</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '1'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Paneer Tikks</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '2'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Paper Cheese Roll</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '3'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                   <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'>
+                                    <section>
+                                        <h3 class = 'dish' >Spring Roll</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>140</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '4'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                          <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                    </section>
+                                     <section>
+                                        <h3 class = 'dish' >Mushroom Baby Corn</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>130</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '5'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                    </section>   
+                                       <section>
+                                        <h3 class = 'dish' >Veg Manchurian</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>200</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '6'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Boneless</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>220</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '7'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Tikka</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>180</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '8'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Ginger Chicken</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '9'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>   
+                        </div>
+                        <!-- For Soups and Salads -->
+                        <div id="soup" class="tab-pane fade in">
+                                <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Tomato Soup</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>95</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '10'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Hot & Sour Veg Soup</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '11'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Sweet Corn Soup</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '12'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                   <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Green Salad</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>65</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '13'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Cucumber Salad</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>70</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '14'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                          <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Crispy Fried Veg Salad</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '15'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Veg Machow Soup</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '16'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Sweet Corn Soup</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>105</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '17'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Toss Salad</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '18'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- For Indian-Veg -->
+                        <div id="iveg" class="tab-pane fade in">
+                                <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Dal Tadka</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>75</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '19'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Aaloo Jeera</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '20'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Veg hyderabadi</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '21'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chana Masala</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '22'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Malai Kofta</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>120</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '23'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Shahi Paneer</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>130</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '24'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Paneer Butter Masala</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>130</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '25'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                          <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                   <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Dal Makhani</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '26'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chola Kulcha</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>140</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '27'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chole Bhature</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>160</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '28'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Veg Fried Rice</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>75</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '29'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Vegetable Pulao</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>75</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '30'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Butter Roti</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>20</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '31'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Plain Naan</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>25</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '32'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Butter Naan</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>30</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '33'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Ghar Ki Thali</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>210</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '34'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Special Thali</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>260</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '35'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Masala Rawa Dosa</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '36'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Utpam</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '37'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish'>Aaloo Paratha</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>45</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '38'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Idli - Vada</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>125</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '39'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- For Indian_non_veg -->
+                        <div id="inon" class="tab-pane fade in">
+                                <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Tandoori</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>225</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '40'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Butter Chicken</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>340</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '41'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Korma</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>300</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '42'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                   <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Mutton Masala</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '43'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mutton Korma</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '44'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                          <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Biriyani</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>120</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '45'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Fried Rice</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '46'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Tikka</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>205</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '47'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Garlic Kabab</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>220</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '48'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- For Chinese -->
+                        <div id="chinese" class="tab-pane fade in">
+                                <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Margaretha Classic</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>131</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '49'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Double Cheese</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>195/span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '50'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Veggie Feast</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>175</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '51'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Country Feast</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>230</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '52'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Veggie Supreme</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>300</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '53'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Exotica</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>400</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = 54'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Mc Aaloo Tikki</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>30</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '54'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mc Veggie</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>60</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '56'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mc Chicken</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '57'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mc Egg</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>30</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '58'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Masala Grill</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>60</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '59'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mc Spicy Paneer</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>115</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '60'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Veg Chowmin</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '61'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chicken Chowmin</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>150</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '62'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Veg Manchrian</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>130</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '63'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chinese Platter</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>250</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '64'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Hakka Noodles</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '65'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish'>Cheese Omlette</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>45</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '66'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>
+                        </div>
+                        <!-- For Drinks-->
+                        <div id="drinks" class="tab-pane fade in">
+                                <div class = 'w3-card-4 w3-white card_review' id =  'order_place'>
+                                    <h3 class = 'text-center' style = 'color:navy'> </h3>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Chcolate Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '67'>Add to My Kart</button>
+                                        <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chocolate Shake With IceCream</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>120</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '68'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                             <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Cold Coffee</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '69'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Vanilla Ice Cream</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '70'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Chocolate Ice Cream</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '71'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Butter Scotch Ice Cream</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>70</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '72'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                     <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Strawberry Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>110</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '73'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >PineApple Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '74'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Black Berry Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '75'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Mango Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '76'>Add to My Kart</button>
+                                           <h5  class = 'margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Banana Shake</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>90</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '77'>Add to My Kart</button>
+                                        <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>                                            <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Hot Fudge</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>85</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '78'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                    <div class = 'col-lg-4 col-md-4 col-sm-6 col-xs-12 text-left'> 
+                                       <section>
+                                        <h3 class = 'dish' >Gajar Ka Halwa</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '79'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Moong Daal Halwa</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>120</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '80'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Trufle Pastry</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>100</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '81'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Jalebi (2pcs)</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>70</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '82'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish' >Rasogolla (2pcs) </h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>80</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '83'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                       <section>
+                                        <h3 class = 'dish'>Gulaab Jamun (2pcs)</h3>
+                                        <h5 class = 'margin_price'>Price: Rs. <span class = 'price'>85</span></h5>
+                                        <button class = 'btn btn-sm btn-info products' ng-click = 'addItem()' id = '84'>Add to My Kart</button>
+                                           <h5  class = ' margin'>Quantity is <span class = 'quantity'>0</span></h5>
+                                           <h5 class = 'margin2'>Price is  <span class = 'final_price'>0</span> </h5>
+                                       </section>
+                                    </div>
+                                </div>    
+                        </div>
+                    </div>
+                    <div class = 'text-center'>
+                         <button class = 'btn btn-lg btn-primary text-center' style = 'margin-bottom:20px;' ng-click = 'bill()'>View My Bill</button>
+                    </div>
+                </div>
+                <div class = 'w3-card-4 w3-white card_review' id = 'view_order' style='display:none'>
+                    <div class = 'row'>
+                        <h2 class = 'color_navy text-center'><i><ins>My Order</ins></i></h2>
+                        <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                            <h3 class = 'color_green'>Dishes Ordered are</h3><div id = 'mydish'></div>
+                        </div>
+                        <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                            <h3 class = 'color_green'>Quantity for dishes</h3>
+                            <div id = 'myquantity'></div>
+                        </div>
+                        <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                            <h3 class = 'color_green'>Pricing for each dish</h3>
+                            <div id = 'myprice'></div>
+                        </div>
+                    </div>
+                    <div class = 'row text-center'>
+                        <h2 class = 'color_navy'>Your Total Cost is <span id = 'cost'></span></h2>
+                    </div>
+                    <form method = 'post' action = '/placeorder'  class = 'text-center'>
+                        <input type  = 'text' name = 'dishes' value = '{{dish}}' class = 'hidden'>
+                        <input type  = 'text' name = 'quantity' value = '{{quant}}' class = 'hidden' >
+                        <input type  = 'text' name = 'price' value = '{{price}}' class = 'hidden'>
+                        <input type  = 'text' name = 'total' value = '{{total_price}}' class = 'hidden'><br>
+                        <button class="btn btn-lg btn-danger" style = 'margin-bottom: 15px' >Place Order</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class = 'col-sm-offset-1 col-sm-10' style = 'width:28%;margin-top:30px; display:none'>
+            <div class = 'w3-card-4 w3-white card_review' id = 'view_order'>
+             <div class = 'row'>
+                 <h2 class = 'color_navy text-center'><i><ins>My Order</ins></i></h2>
+                 <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                    <h3 class = 'color_green'>Dishes Ordered are</h3><div id = 'mydish'></div>
+                </div>
+                <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                    <h3 class = 'color_green'>Quantity for dishes</h3>
+                    <div id = 'myquantity'></div>
+                </div>
+                <div class = 'col-lg-4 col-md-3 col-sm-4 col-xs-10'>
+                    <h3 class = 'color_green'>Pricing for each dish</h3>
+                    <div id = 'myprice'></div>
+                </div>
+            </div>
+            <div class = 'row text-center'>
+                 <h2 class = 'color_navy'>Your Total Cost is <span id = 'cost'></span></h2>
+             </div>
+            <form method = 'post' action = '/placeorder'  class = 'text-center'>
+                 <input type  = 'text' name = 'dishes' value = '{{dish}}' class = 'hidden'>
+                 <input type  = 'text' name = 'quantity' value = '{{quant}}' class = 'hidden' >
+                 <input type  = 'text' name = 'price' value = '{{price}}' class = 'hidden'>
+                 <input type  = 'text' name = 'total' value = '{{total_price}}' class = 'hidden'><br>
+                 <button class="btn btn-lg btn-danger" style = 'margin-bottom: 15px' >Place Order</button>
+             </form>
+            </div>
+            </div>
+
+        </div>
+            </div>
+        </div>
+    </section>
+<footer>
+    <div class="container text-left">
+        <div class="row ">
+            <div class=" mylogo2 text-center" style = 'margin-bottom:40px;'><i><span style="font-size:32px">
+                The Incredible Enigma</span></i>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6 ">
+                <ul class="list-group ">
+                    <li>About Us</li>
+                    <li >Culture</li>
+                    <li>Blog</li>
+                    <li >Careers</li>
+                    <li>Contact</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Code of Conduct</li>
+                    <li>Community</li>
+                    <li>Verified Users</li>
+                    <li>Blogger Help</li>
+                    <li>Developers</li>
+                    <li>Mobile Apps</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Add a Restaurant</li>
+                    <li>Claim your Listing</li>
+                    <li>Business App</li>
+                    <li>Business Blog</li>
+                    <li>Restaurant Widgets</li>
+                    <li>Products for Businesses</li>
+                </ul>
+            </div>
+            <div class="col-m-5 col-lg-3 col-xs-6">
+                <ul>
+                    <li>Privacy </li>
+                    <li>Terms and Conditions</li>
+                    <li>API Policy </li>
+                    <li>CSR</li>
+                    <li>Security</li>
+                    <li>Site Map</li>
+                </ul>
+            </div>
+        </div>
+        </div>
+</footer>
+</section>
+<script src="/a/js/rest.js"></script>
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>    
+</body>
+</html>

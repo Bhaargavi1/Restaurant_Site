@@ -1,0 +1,46 @@
+<!Doctype HTML>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="HandheldFriendly" content="true">
+<meta name="viewport" content="width=device-width, user-scalable=yes" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<link rel = "stylesheet" href = "/a/css/bootstrap.css">
+<link rel = "stylesheet" href = "/a/css/w3css.css">
+<link rel = "stylesheet" href = "/a/css/site.css">
+<title>Register/Login</title>
+</head>
+<!-- AJS Controller used -->
+    
+<body class = 'bg2' ng-app="myapp" ng-controller="Ctrl_form">
+    <h2 class ='text-center admin_head'>Welcome Admin</h2>
+    <div class = 'row'>
+        <div class = 'col-sm-offset-3 col-sm-7 col-xs-offset-4 col-xs-8'>
+            <div class="container-fluid ">
+                <div class="w3-card-4 w3-light-gray forms" style = 'height:110%;'>
+                    <h2 class = 'text-center'>Admin Login</h2>
+                    <form class="form-horizontal" method="post" action = "/admin_login">
+                        <!-- Password input-->
+                        <div class="form-group">
+                            <h3><label class="col-md-4 col-lg-4 col-sm-4 control-label" for="textinput">Password<sup>*</sup></label></h3>
+                            <div class="col-md-7 col-lg-7 col-sm-6">
+                                <input name="pswd_admin" type="password" class="form-control input-md" required>
+                            </div>
+                        </div>
+                         <!-- Button (Double) -->
+                        <div class="form-group">
+                            <div class="text-center">
+                                <button  class="btn btn-danger btn-md button">Submit</button>
+                            </div>
+                        </div>
+                      </form>
+                   </div>
+              </div>
+        </div>
+    </div>
+<script src="/a/js/jquery.js"></script>
+<script src="/a/js/bootstrap.js"></script>
+<script src="/a/js/angular.js"></script>
+<script src="/a/js/form.js"></script>
+</body>
+</html>
